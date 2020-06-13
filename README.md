@@ -20,6 +20,18 @@ $ git clone https://github.com/enajcelis/brandlive.git
 $ cd brandlive/
 $ composer install
 ```
+Recuerda ejecutar los comandos para la creación de la base de datos:
+
+```
+# Crear base de datos
+$ php app/console doctrine:database:create
+
+# Actualizar base de datos
+$ php app/console doctrine:schema:update --force  
+
+# Si deseas validar las setencias a ejecutar:
+$ php app/console doctrine:schema:update --dump-sql
+```
 
 # Probando la aplicación
 
@@ -33,18 +45,6 @@ $ php app/console server:run
 
 # Consideraciones
 La aplicación está configurada con el driver de doctrine **pdo_pgsql**
-Recuerda ejecutar los comandos para la creación de la base de datos:
-
-```
-# Crear base de datos
-$ php app/console doctrine:database:create
-
-# Actualizar base de datos
-$ php app/console doctrine:schema:update --force  
-
-# Si deseas validar las setencias a ejecutar:
-$ php app/console doctrine:schema:update --dump-sql
-```
 
 ## Autor
 
