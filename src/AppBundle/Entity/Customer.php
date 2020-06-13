@@ -8,11 +8,13 @@ use JMS\Serializer\Annotation\Type;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\Validator\Constraints\Count;
 use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * Customer
  *
  * @ORM\Table(name="customer")
+ * @UniqueEntity(fields="email", message="customer.email.duplicate")
  * @ORM\Entity
  */
 class Customer {

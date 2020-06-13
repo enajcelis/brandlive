@@ -5,3 +5,4 @@ customer.validate.email: Debe especificar un correo electrónico
 customer.invalid.email: El correo {{ value }} no es válido
 customer.validate.groups.count: Debe seleccionar al menos un (1) grupo
 customer.validate.observations: Debe especificar las observaciones
+customer.email.duplicate: El email ingresado ya se encuentra registrado
