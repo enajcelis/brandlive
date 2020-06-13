@@ -28,7 +28,7 @@ La forma más sencilla de probar la aplicación es ejecutando el servidor web in
 Para ello ejecuta el siguiente comando:
 
 ```
-$ php bin/console server:run
+$ php app/console server:run
 ```
 
 # Consideraciones
