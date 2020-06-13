@@ -1,7 +1,6 @@
 {% extends 'base.html.twig' %}
 {% trans_default_domain "labels" %}
 
-
 {% block section %}{{ 'section.customer.index'|trans }}{% endblock section %}
 
 {% block mainbutton %}
@@ -76,7 +75,7 @@
           .fail(function(data){
             alert('error');
           });
-        }
+      }
       
       // jquery-confirm 
       $('.delete-button').on('click', function(e){
@@ -138,6 +137,5 @@
           });         
 
         });
-
     </script>
-  {% endblock javascripts %}
+{% endblock javascripts %}

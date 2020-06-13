@@ -11,7 +11,7 @@ table.customer.email: Email
 confirm.delete.title: Confirmr action
 confirm.delete.content: Are you sure you want to delete the customer? \n This action can't be undone.
 
-# Section titles
+# Customer Section titles
 section.customer.index: List of Customers
 section.customer.show: Customer detail
 section.customer.new: Add customer
@@ -19,6 +19,15 @@ section.customer.edit: Edit customer
 
 # Customer Buttons
 button.customer.new: Add Customer
+
+# Groups
+label.group.id: Id 
+label.group.name: Name 
+table.group.id: Id
+table.group.name: Name
+
+# Groups Section titles
+section.group.index: List of Customer Groups
 
 # Generic Buttons
 button.save: Save

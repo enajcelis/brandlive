@@ -1,0 +1,70 @@
+{% extends 'base.html.twig' %}
+{% trans_default_domain "labels" %}
+
+{% block section %}{{ 'section.group.index'|trans }}{% endblock section %}
+
+{% block body %}  
+
+    <div class="container">
+      <div class="input-group" id="search-bar-container">
+      </div>
+    </div>
+
+    <div class="table table-responsive table-striped" width="100%">
+      <table id="groupsTable" width="100%">
+        <thead>
+        <tr>
+          <th>{{'table.group.id'|trans|upper }}</th>
+          <th>{{'table.group.name'|trans|upper }}</th>
+        </tr>
+        <tbody>
+        {% for group in groups %}
+          <tr>
+            <td>{{ group.id }}</td>
+            <td>{{ group.name }}</td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+{% endblock %}
+
+{% block javascripts %}
+  {{ parent() }}
+
+    <script>
+      $(document).ready(function(){
+
+        $('#groupsTable').DataTable({           
+            "dom": '<"top"f>rt<"bottom" ip><"clear">',
+            "pagingType": 'simple_numbers', 
+            "pageLength": 10,               
+            "language": {
+              "search": "_INPUT_",     
+              "emptyTable": "",       
+              "searchPlaceholder": "Buscar..." ,  
+              "info": "Mostrando _TOTAL_ registros",
+              "infoEmpty": "Mostrando _TOTAL_ registros",
+              "zeroRecords": "Nada para mostrar",
+              "infoFiltered": "(filtrando de un total de _MAX_ registros)",
+              "paginate": {
+                "previous": "<", 
+                "next": ">", 
+                "first": "<<", 
+                "last": ">>"
+              },
+            },
+            "order": [0, "asc"], 
+            "columns": [
+              { "searchable": true },
+              { "searchable": true },
+            ],
+            "initComplete": function() {
+              $("#groupsTable_filter").detach().appendTo('#search-bar-container');
+            }         
+          });        
+        });
+    </script>
+{% endblock javascripts %}

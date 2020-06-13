@@ -11,7 +11,7 @@ table.customer.email: Email
 confirm.delete.title: Confirmar acción
 confirm.delete.content: ¿Está seguro que desea eliminar el cliente? La acción no podrá deshacerse.
 
-# Section titles
+# Customer Section titles
 section.customer.index: Listado de Clientes
 section.customer.show: Detalle del cliente
 section.customer.new: Agregar cliente
@@ -19,6 +19,15 @@ section.customer.edit: Editar cliente
 
 # Customer Buttons
 button.customer.new: Agregar Cliente
+
+# Groups
+label.group.id: Id 
+label.group.name: Nombre 
+table.group.id: Id
+table.group.name: Nombre
+
+# Groups Section titles
+section.group.index: Listado de Grupos de Cliente
 
 # Generic Buttons
 button.save: Guardar
