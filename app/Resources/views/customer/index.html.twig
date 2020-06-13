@@ -73,8 +73,11 @@
             location.reload();
           })
           .fail(function(data){
-            alert('error');
-          });
+            $.alert({
+              title: '{{ 'dialog.customer.error.title'|trans }}',
+              content: '{{ 'dialog.customer.error.content'|trans }}',
+            });
+        });
       }
       
       // jquery-confirm 
@@ -89,7 +92,7 @@
           content: '{{ 'confirm.delete.content'|trans }}',
           buttons: {
             confirm: {
-              columnClass: 'col-md-12',
+              text: '{{ 'button.confirm'|trans }}',
               action: function () {                
                 callDeletePath(url, { id: customerId } );
               }

@@ -9,7 +9,7 @@
     <meta name="description" content="prueba tecnica brandlive">
     <meta name="author" content="Jane Celis">
 
-    <title>{% block title %}Brandlive - Clientes{% endblock %}</title>
+    <title>{% block title %}{{ 'title.browser'|trans }}{% endblock %}</title>
 
     <!-- Styles -->
     <link rel="stylesheet" type="text/css" href="{{ asset('bundles/assets/vendor/bootstrap/css/bootstrap.css') }}"/>
@@ -25,7 +25,7 @@
     <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
     <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="{{ path("homepage") }}">
       <img src="{{ asset('bundles/assets/img/brandlive-logo.png') }}" alt="Brandlive" class="navbar-logo" /> 
-      Brandlive
+      {{ 'top.item.logo.text'|trans }}
     </a>    
     <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse"
       data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,7 +33,7 @@
     </button>
     <ul class="navbar-nav px-3">
       <li class="nav-item text-nowrap">
-        <a class="nav-link" href="{{ path("homepage") }}"><i class="far fa-window-close"></i> Cerrar sesión</a>
+        <a class="nav-link" href="{{ path("info") }}"><i class="fas fa-info-circle"></i></a>
       </li>
     </ul>
   </nav>
@@ -46,19 +46,19 @@
             <li class="nav-item">
               <a class="nav-link" href="{{ path("homepage") }}">
                 <i class="fas fa-home"></i>
-                Inicio <span class="sr-only">(current)</span>
+                {{ 'menu.item.home'|trans }}
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{ path("customer_index") }}">
                 <i class="fas fa-user"></i>
-                Clientes
+                {{ 'menu.item.customers'|trans }}
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{ path("group_index") }}">
-                <span class="fas fa-users"></span>
-                Grupos de cliente
+                <i class="fas fa-users"></i>
+                {{ 'menu.item.groups'|trans }}
               </a>
             </li>
           </ul>

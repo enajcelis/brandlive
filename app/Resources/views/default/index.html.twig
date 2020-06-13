@@ -1,6 +1,7 @@
 {% extends 'base.html.twig' %}
+{% trans_default_domain "labels" %}
 
-{% block section %}Prueba Técnica para Brandlive{% endblock section %}
+{% block section %}{{ 'index.section.title'|trans }}{% endblock section %}
 
 {% block body %}
 
@@ -8,6 +9,10 @@
     <p class="intro">
       La evaluación consiste en realizar un pequeño ABM utilizando Symfony como Framework de desarrollo. 
       Se debe tener en cuenta que la versión del Framework a utilizar es la <code>2.8.x</code>.
+    </p>
+    <p class="intro">
+      Las intrucciones del desarrollo se tomaron del siguiente 
+      <a href="https://docs.google.com/document/d/18evaSntbO-HOY9fY4M8lnnpvx0m6wfPZw6tDK4xha1E/edit" target="_blank">Documento</a>
     </p>
   </div>
 

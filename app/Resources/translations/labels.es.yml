@@ -1,3 +1,22 @@
+# Title
+title.browser: Brandlive - Prueba Técnica
+
+# Menu
+menu.item.home: Inicio
+menu.item.customers: Clientes
+menu.item.groups: Grupos de Cliente
+
+# Top bar
+top.item.logo.text: Brandlive
+top.item.logout: Salir
+
+# Info
+info.section.title: Información
+info.content: Desarrollado por
+
+# Index
+index.section.title: Prueba Técnica para Brandlive
+
 # Customer
 label.customer.firstname: Nombre
 label.customer.lastname: Apellido
@@ -19,6 +38,10 @@ section.customer.edit: Editar cliente
 
 # Customer Buttons
 button.customer.new: Agregar Cliente
+
+# Customer Dialog error
+dialog.customer.error.title: ¡Error!
+dialog.customer.error.content: No se pudo eliminar el cliente
 
 # Groups
 label.group.id: Id 

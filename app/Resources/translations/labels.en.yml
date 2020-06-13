@@ -1,3 +1,22 @@
+# Title
+title.browser: Brandlive - Challenge
+
+# Menu
+menu.item.home: Home
+menu.item.customers: Customers
+menu.item.groups: Customer Group(s)
+
+# Top bar
+top.item.logo.text: Brandlive
+top.item.logout: Salir
+
+# Info
+info.section.title: Information
+info.content: Developed by
+
+# Index
+index.section.title: Brandlive Challeng
+
 # Customer
 label.customer.firstname: First name
 label.customer.lastname: Last name
@@ -19,6 +38,10 @@ section.customer.edit: Edit customer
 
 # Customer Buttons
 button.customer.new: Add Customer
+
+# Customer Dialog error
+dialog.customer.error.title: Error!
+dialog.customer.error.content: The customer could not be deleted
 
 # Groups
 label.group.id: Id 

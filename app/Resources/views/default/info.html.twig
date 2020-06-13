@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+{% trans_default_domain "labels" %}
+
+{% block section %}{{ 'info.section.title'|trans }}{% endblock section %}
+
+{% block body %}
+
+  <div class="container">
+    <p class="intro">
+      {{ 'info.content'|trans }} <code><a href="https://www.linkedin.com/in/jane-celis/" target="_blank">Jane Celis</a></code>. © 2020
+    </p>
+  </div>
+
+{% endblock %}

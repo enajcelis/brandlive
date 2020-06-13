@@ -36,6 +36,7 @@ class CustomerType extends AbstractType{
       ->add('observations', TextareaType::class, array(
         'label'              => 'label.customer.observations',
         'translation_domain' => 'labels',
+        'attr'               => array('rows' => '4')
       ));
   }
 
