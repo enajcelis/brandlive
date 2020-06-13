@@ -16,15 +16,18 @@ class CustomerType extends AbstractType{
     $builder
       ->add('firstName', TextType::class, array(
         'label'              => 'label.customer.firstname',
-        'translation_domain' => 'labels'
+        'translation_domain' => 'labels',
+        'required'           => true
       ))
       ->add('lastName', TextType::class, array(
         'label'              => 'label.customer.lastname',
-        'translation_domain' => 'labels'
+        'translation_domain' => 'labels',
+        'required'           => true
       ))
       ->add('email', EmailType::class, array(
         'label'              => 'label.customer.email',
-        'translation_domain' => 'labels'
+        'translation_domain' => 'labels',
+        'required'           => true
       ))
       ->add('groups', EntityType::class, array(
         'class'              => 'AppBundle:Group',
@@ -32,11 +35,13 @@ class CustomerType extends AbstractType{
         'translation_domain' => 'labels',
         'multiple'           => true,
         'expanded'           => true,
+        'required'           => true
       ))
       ->add('observations', TextareaType::class, array(
         'label'              => 'label.customer.observations',
         'translation_domain' => 'labels',
-        'attr'               => array('rows' => '4')
+        'attr'               => array('rows' => '4'),
+        'required'           => true,
       ));
   }
 
