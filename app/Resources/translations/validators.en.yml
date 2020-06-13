@@ -1,0 +1,7 @@
+# Customer
+customer.validate.firstname: You must specify the first name
+customer.validate.lastname: You must specify the last name
+customer.validate.email: You must specify an email
+customer.invalid.email: The email {{ value }} is not valid
+customer.validate.groups.count: You must select al least one (1) group
+customer.validate.observations: You must specify the observations

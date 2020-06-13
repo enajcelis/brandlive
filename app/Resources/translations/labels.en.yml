@@ -1,0 +1,35 @@
+# Customer
+label.customer.firstname: First name
+label.customer.lastname: Last name
+label.customer.email: Email
+label.customer.groups: Customer group(s)
+label.customer.observations: Observations
+table.customer.firstname: First name
+table.customer.lastname: Last name
+table.customer.groups: Groups
+table.customer.email: Email
+confirm.delete.title: Confirmr action
+confirm.delete.content: Are you sure you want to delete the customer? \n This action can't be undone.
+
+# Section titles
+section.customer.index: List of Customers
+section.customer.show: Customer detail
+section.customer.new: Add customer
+section.customer.edit: Edit customer
+
+# Customer Buttons
+button.customer.new: Add Customer
+
+# Generic Buttons
+button.save: Save
+button.back: Back
+button.edit: Edit
+button.delete: Delete
+button.confirm: Confirm
+button.cancel: Cancel
+
+# Generic Tables
+table.actions: Actions
+
+# Generic placeholders
+label.search.placeholder: Search...

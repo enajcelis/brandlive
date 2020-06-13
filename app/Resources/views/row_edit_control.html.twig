@@ -1,0 +1,15 @@
+{% block row_edit_control %}
+
+  <a href="{{ data_url_view }}" class="no-underline">
+    <span class="action-btn"><i class="fa fa-eye"></i></span>
+  </a>
+
+  <a href="{{ data_url_edit }}" class="no-underline">  
+    <span class="action-btn"><i class="fa fa-pencil-alt"></i></span>
+  </a>
+
+  <a href="{{ data_url_delete }}" class="no-underline delete-button" data-id={{ customer.id }} data-url={{ data_url_delete }}>
+    <span class="action-btn"><i class="fa fa-trash-alt"></i></span>
+  </a>
+
+{% endblock row_edit_control %}

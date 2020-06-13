@@ -1,0 +1,4 @@
+# Customer
+message.customer.add.success: El cliente fue registrado correctamente
+message.customer.edit.success: El cliente fue actualizado correctamente
+message.customer.delete.success: El cliente fue eliminado correctamente

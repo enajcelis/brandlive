@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+{% trans_default_domain "labels" %}
+
+{% block section %}{{ 'section.customer.edit'|trans }}: <code>{{ customer }}</code>{% endblock section %}
+
+{% block body %}  
+
+  <div class="main-container">
+
+    {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+
+      {{ form_row(form.firstName) }} 
+      {{ form_row(form.lastName) }} 
+      {{ form_row(form.email) }} 
+      {{ form_row(form.groups) }} 
+      {{ form_row(form.observations) }} 
+
+      <div class="row">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> {{ 'button.save'|trans }}</button>
+          <button type="button" class="btn btn-secondary" onclick="location.href='{{ path('customer_index') }}';"><i class="fa fa-arrow-left"></i> {{ 'button.back'|trans }}</button>
+        </div>
+      </div>
+
+    {{ form_end (form) }}
+
+  </div>
+
+{% endblock %}

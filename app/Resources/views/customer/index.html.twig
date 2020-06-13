@@ -1,0 +1,143 @@
+{% extends 'base.html.twig' %}
+{% trans_default_domain "labels" %}
+
+
+{% block section %}{{ 'section.customer.index'|trans }}{% endblock section %}
+
+{% block mainbutton %}
+  <a role="button" class="btn btn-primary mb-2" href="{{ path('customer_new') }}">
+    <i class="fa fa-plus-circle"></i> {{ 'button.customer.new'|trans }}
+  </a>
+{% endblock %}
+
+{% block body %}  
+
+  {% for label, flashes in app.session.flashbag.all %}
+    {% for flash in flashes %}
+      <div class="alert alert-{{ label }}">
+        {{ flash }}
+      </div>
+    {% endfor %}
+  {% endfor %}
+
+    <div class="container">
+      <div class="input-group" id="search-bar-container">
+      </div>
+    </div>
+
+    <div class="table table-responsive table-striped" width="100%">
+      <table id="customersTable" width="100%">
+        <thead>
+        <tr>
+          <th>{{'table.customer.firstname'|trans|upper }}</th>
+          <th>{{'table.customer.lastname'|trans|upper }}</th>
+          <th>{{'table.customer.email'|trans|upper }}</th>
+          <th>{{'table.customer.groups'|trans|upper }}</th>
+          <th>{{'table.actions'|trans|upper }}</th>
+        </tr>
+        <tbody>
+        {% for customer in customers %}
+          <tr>
+            <td>{{ customer.firstName }}</td>
+            <td>{{ customer.lastName }}</td>
+            <td>{{ customer.email }}</td>
+            <td>   
+              {% for group in customer.groups %}
+                {{ group }}<br>
+              {% endfor %}
+            </td>
+            <td>
+              {% include "row_edit_control.html.twig" with
+              {
+                'data_id'         : customer.id,
+                'data_url_view'   : path ('customer_show', { 'id' : customer.id }),
+                'data_url_edit'   : path ('customer_edit', { 'id' : customer.id }),
+                'data_url_delete' : path ('customer_delete_confirm', { 'id' : customer.id }),
+              } %}
+            </td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+{% endblock %}
+
+{% block javascripts %}
+  {{ parent() }}
+
+    <script>
+      function callDeletePath(url, obj){                     
+        $.post(url, obj)
+          .done(function(data){
+            location.reload();
+          })
+          .fail(function(data){
+            alert('error');
+          });
+        }
+      
+      // jquery-confirm 
+      $('.delete-button').on('click', function(e){
+        e.preventDefault();
+
+        let customerId = $(this).attr("data-id");
+        let url = $(this).attr("data-url");
+
+        $.confirm({
+          title: '{{ 'confirm.delete.title'|trans }}',
+          content: '{{ 'confirm.delete.content'|trans }}',
+          buttons: {
+            confirm: {
+              columnClass: 'col-md-12',
+              action: function () {                
+                callDeletePath(url, { id: customerId } );
+              }
+            },
+            cancel: {
+              text: '{{ 'button.cancel'|trans }}',
+              action: function(){}
+            },
+          }
+        });
+      });  
+
+      $(document).ready(function(){
+
+        $('#customersTable').DataTable({           
+            "dom": '<"top"f>rt<"bottom" ip><"clear">',
+            "pagingType": 'simple_numbers', 
+            "pageLength": 10,               
+            "language": {
+              "search": "_INPUT_",     
+              "emptyTable": "",       
+              "searchPlaceholder": "Buscar..." ,  
+              "info": "Mostrando _TOTAL_ registros",
+              "infoEmpty": "Mostrando _TOTAL_ registros",
+              "zeroRecords": "Nada para mostrar",
+              "infoFiltered": "(filtrando de un total de _MAX_ registros)",
+              "paginate": {
+                "previous": "<", 
+                "next": ">", 
+                "first": "<<", 
+                "last": ">>"
+              },
+            },
+            "order": [0, "asc"], 
+            "columns": [
+              { "searchable": true },
+              { "searchable": true },
+              { "searchable": true },
+              { "searchable": true },
+              { "searchable": false },
+            ],
+            "initComplete": function() {
+              $("#customersTable_filter").detach().appendTo('#search-bar-container');
+            }         
+          });         
+
+        });
+
+    </script>
+  {% endblock javascripts %}

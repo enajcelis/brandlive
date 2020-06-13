@@ -1,0 +1,35 @@
+# Customer
+label.customer.firstname: Nombre
+label.customer.lastname: Apellido
+label.customer.email: Email
+label.customer.groups: Grupo(s) de Cliente
+label.customer.observations: Observaciones
+table.customer.firstname: Nombre
+table.customer.lastname: Apellido
+table.customer.groups: Grupos
+table.customer.email: Email
+confirm.delete.title: Confirmar acción
+confirm.delete.content: ¿Está seguro que desea eliminar el cliente? La acción no podrá deshacerse.
+
+# Section titles
+section.customer.index: Listado de Clientes
+section.customer.show: Detalle del cliente
+section.customer.new: Agregar cliente
+section.customer.edit: Editar cliente
+
+# Customer Buttons
+button.customer.new: Agregar Cliente
+
+# Generic Buttons
+button.save: Guardar
+button.back: Regresar
+button.edit: Editar
+button.delete: Eliminar
+button.confirm: Confirmar
+button.cancel: Cancelar
+
+# Generic Tables
+table.actions: Acciones
+
+# Generic placeholders
+label.search.placeholder: Buscar...
