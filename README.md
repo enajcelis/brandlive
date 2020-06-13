@@ -1,6 +1,7 @@
-# Prueba Técnica de Brandlive
+# ABM de Clientes
 
 El proyecto consiste de un ABM de Clientes desarrollado bajo el Framework Symfony en su versión 2.8.
+Desarrollo realizado para una prueba técnica.
 
 # Requisitos
 
