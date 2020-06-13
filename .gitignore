@@ -1,6 +1,3 @@
-# Assets and user uploads
-/web/uploads
-
 # Parameters
 /app/config/parameters.yml
 
