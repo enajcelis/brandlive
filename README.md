@@ -33,6 +33,8 @@ $ php app/console doctrine:schema:update --force
 $ php app/console doctrine:schema:update --dump-sql
 ```
 
+Es importante agregar data en la tabla **group**, necesaria en el ABM de Clientes.
+
 # Probando la aplicación
 
 La forma más sencilla de probar la aplicación es ejecutando el servidor web interno de PHP. De esta forma la aplicación se puede ejecutar sin necesidad de usar Apache o Nginx.
@@ -45,6 +47,8 @@ $ php app/console server:run
 
 # Consideraciones
 La aplicación está configurada con el driver de doctrine **pdo_pgsql**
+
+Se deben agregar registros en la tabla **group**
 
 ## Autor
 
