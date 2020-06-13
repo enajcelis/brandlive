@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block section %}Página no encontrada{% endblock section %}
+
+{% block body %}
+  <div class="container">
+    <p class="intro">
+      La página solicitada no pudo ser localizada. 
+    </p>
+    <p class="intro">
+      Verifique cualquier error ortográfico en la URL 
+      o <a href="{{ path('homepage') }}">regrese a la página de inicio</a>.
+    </p>
+  </div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block section %}Prohibido{% endblock section %}
+
+{% block body %}
+  <div class="container">
+    <p class="intro">
+      No tiene permiso para ver la página solicitada.
+    </p>
+    <p class="intro">
+      Póngase en contacto con el administrador
+      o <a href="{{ path('homepage') }}">regrese a la página de inicio</a>.
+    </p>
+  </div>
+{% endblock %}
