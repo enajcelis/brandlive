@@ -20,7 +20,7 @@ $ git clone https://github.com/enajcelis/brandlive.git
 $ cd brandlive/
 $ composer install
 ```
-Recuerda ejecutar los comandos para la creación de la base de datos:
+Ejecutar los comandos para la creación de la base de datos:
 
 ```
 # Crear base de datos
