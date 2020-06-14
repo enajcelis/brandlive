@@ -35,6 +35,12 @@ $ php app/console doctrine:schema:update --dump-sql
 
 Es importante agregar data en la tabla **group**, necesaria en el ABM de Clientes.
 
+```
+INSERT INTO customgroup VALUES (1, 'Grupo A');
+INSERT INTO customgroup VALUES (2, 'Grupo B');
+INSERT INTO customgroup VALUES (3, 'Grupo C');
+```
+
 # Probando la aplicación
 
 La forma más sencilla de probar la aplicación es ejecutando el servidor web interno de PHP. De esta forma la aplicación se puede ejecutar sin necesidad de usar Apache o Nginx.
