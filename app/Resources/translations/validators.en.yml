@@ -6,3 +6,5 @@ customer.invalid.email: The email {{ value }} is not valid
 customer.validate.groups.count: You must select al least one (1) group
 customer.validate.observations: You must specify the observations
 customer.email.duplicate: The email is already registered
+customer.firstname.contains.numbers: Your firstname cannot contain numbers
+customer.lastname.contains.numbers: Your lastname cannot contain numbers

@@ -27,12 +27,22 @@ class Customer {
 
   /**
    * @Assert\NotBlank(message="customer.validate.firstname")
+   * @Assert\Regex(
+   *    pattern="/[0-9]/",
+   *    match=false,
+   *    message="customer.firstname.contains.numbers"
+   * )
    * @ORM\Column(name="firstname", type="string", length=100, nullable=false)
    */
   private $firstName;
 
   /**
    * @Assert\NotBlank(message="customer.validate.lastname")
+   * @Assert\Regex(
+   *    pattern="/[0-9]/",
+   *    match=false,
+   *    message="customer.lastname.contains.numbers"
+   * )
    * @ORM\Column(name="lastname", type="string", length=100, nullable=false)
    */
   private $lastName;
